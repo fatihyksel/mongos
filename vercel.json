@@ -13,6 +13,6 @@
     }
   ],
   "env": {
-    "MONGO_URI": "mongodb+srv://<username>:<password>@cluster.mongodb.net/<dbname>?retryWrites=true&w=majority"
+    "MONGO_URI": "mongodb+srv://fatihyuksel2822:h3URMW0ATp4DK94F@cluster0.9qwck.mongodb.net/mekanbul?retryWrites=true&w=majority&appName=Cluster0"
   }
 }
