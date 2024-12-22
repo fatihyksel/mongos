@@ -1,18 +1,16 @@
-{
-  "version": 2,
-  "builds": [
-    {
-      "src": "/index.html",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
-  "env": {
-    "MONGO_URI": "mongodb+srv://fatihyuksel2822:h3URMW0ATp4DK94F@cluster0.9qwck.mongodb.net/mekanbul?retryWrites=true&w=majority&appName=Cluster0"
+  {
+    "version": 2,
+    "builds": [
+      {
+        "src": "/index.html",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
+   
   }
-}
