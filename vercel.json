@@ -1,16 +1,34 @@
-  {
-    "version": 2,
-    "builds": [
-      {
-        "src": "/app.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/index.html"
-      }
-    ]
-   
-  }
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "routes//*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "app_api//*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/app_api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/app.js"
+    }
+  ],
+  "env": {
+    "MONGO_URI": "mongodb+srv://fatihyuksel2822:h3URMW0ATp4DK94F@cluster0.9qwck.mongodb.net/mekanbul?retryWrites=true&w=majority&appName=Cluster0"
+  },
+  "ignoreBuildStep": [
+    "node_modules",
+    ".git"
+  ]
+}
